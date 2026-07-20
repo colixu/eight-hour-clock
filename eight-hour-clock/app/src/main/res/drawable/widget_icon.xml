@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- 蓝底圆角方块，与应用图标一致 -->
+    <!-- 深色渐变圆角方块，与新应用图标一致 -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#1565C0" />
+            <gradient
+                android:angle="270"
+                android:startColor="#101B2C"
+                android:endColor="#080D15"
+                android:type="linear" />
             <corners android:radius="16dp" />
+            <stroke android:width="1dp" android:color="#26303D" />
         </shape>
     </item>
 
-    <!-- 居中的白色表盘 -->
+    <!-- 居中的表盘 -->
     <item
         android:drawable="@drawable/ic_launcher_foreground"
         android:width="52dp"

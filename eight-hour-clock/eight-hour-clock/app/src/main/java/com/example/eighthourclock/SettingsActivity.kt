@@ -1,9 +1,7 @@
 package com.example.eighthourclock
 
 import android.app.Activity
-import android.appwidget.AppWidgetManager
 import android.content.ActivityNotFoundException
-import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
 import android.provider.AlarmClock
@@ -38,17 +36,6 @@ class SettingsActivity : Activity() {
                 .apply()
             Toast.makeText(this, getString(R.string.saved_toast), Toast.LENGTH_SHORT).show()
             finish()
-        }
-
-        findViewById<Button>(R.id.btn_pin_widget).setOnClickListener {
-            val awm = getSystemService(AppWidgetManager::class.java)
-            if (awm != null && awm.isRequestPinAppWidgetSupported) {
-                awm.requestPinAppWidget(
-                    ComponentName(this, ClockWidgetProvider::class.java), null, null
-                )
-            } else {
-                Toast.makeText(this, getString(R.string.pin_widget_manual), Toast.LENGTH_LONG).show()
-            }
         }
 
         findViewById<Button>(R.id.btn_open_clock).setOnClickListener {

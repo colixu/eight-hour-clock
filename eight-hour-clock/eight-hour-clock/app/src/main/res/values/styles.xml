@@ -5,4 +5,10 @@
     <style name="TransparentLaunch" parent="@android:style/Theme.NoDisplay">
     </style>
 
+    <!-- 设置页：深色科技风 -->
+    <style name="SettingsTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
+
 </resources>
