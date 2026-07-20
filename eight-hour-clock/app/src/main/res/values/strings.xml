@@ -2,5 +2,16 @@
 <resources>
     <string name="app_name">八小时时钟</string>
     <string name="alarm_set">闹钟已设置为 %1$s</string>
+    <string name="alarm_set_multi">已设置 %1$d 个闹钟，最早 %2$s 响</string>
     <string name="no_clock_app">未找到系统时钟应用，无法设置闹钟</string>
+    <string name="settings_title">八小时时钟设置</string>
+    <string name="base_hours_label">几小时后响（小时）</string>
+    <string name="count_label">闹钟个数</string>
+    <string name="interval_label">相邻闹钟间隔（分钟）</string>
+    <string name="save_button">保存设置</string>
+    <string name="saved_toast">设置已保存</string>
+    <string name="shortcut_settings">设置</string>
+    <string name="shortcut_6h">快设 6 小时</string>
+    <string name="shortcut_8h">快设 8 小时</string>
+    <string name="shortcut_10h">快设 10 小时</string>
 </resources>
