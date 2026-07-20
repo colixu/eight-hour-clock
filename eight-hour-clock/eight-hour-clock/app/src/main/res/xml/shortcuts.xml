@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="quick6"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:shortcutShortLabel="@string/shortcut_6h"
+        android:shortcutLongLabel="@string/shortcut_6h">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.eighthourclock"
+            android:targetClass="com.example.eighthourclock.MainActivity">
+            <extra android:name="quick_hours" android:value="6" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="quick8"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:shortcutShortLabel="@string/shortcut_8h"
+        android:shortcutLongLabel="@string/shortcut_8h">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.eighthourclock"
+            android:targetClass="com.example.eighthourclock.MainActivity">
+            <extra android:name="quick_hours" android:value="8" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="quick10"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:shortcutShortLabel="@string/shortcut_10h"
+        android:shortcutLongLabel="@string/shortcut_10h">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.eighthourclock"
+            android:targetClass="com.example.eighthourclock.MainActivity">
+            <extra android:name="quick_hours" android:value="10" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:shortcutShortLabel="@string/shortcut_settings"
+        android:shortcutLongLabel="@string/shortcut_settings">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.eighthourclock"
+            android:targetClass="com.example.eighthourclock.SettingsActivity" />
+    </shortcut>
+
+</shortcuts>
