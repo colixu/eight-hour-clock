@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 无窗口模式：Activity 根本不创建窗口，点图标无任何界面 -->
+    <style name="TransparentLaunch" parent="@android:style/Theme.NoDisplay">
+    </style>
+
+    <!-- 设置页：深色科技风 -->
+    <style name="SettingsTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
+
+</resources>
