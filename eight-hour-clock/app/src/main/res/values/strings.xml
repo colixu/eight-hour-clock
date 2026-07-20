@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">八小时时钟</string>
+    <string name="alarm_set">闹钟已设置为 %1$s</string>
+    <string name="no_clock_app">未找到系统时钟应用，无法设置闹钟</string>
+</resources>
