@@ -9,8 +9,9 @@ import android.widget.RemoteViews
 import android.widget.Toast
 
 /**
- * 桌面小组件：一个 1x1 按钮。
- * 点它不启动任何界面（广播直接处理），真正零动画设闹钟。
+ * 桌面小组件：与图标一致的 1x1 按钮。
+ * 点图标区域 = 设闹钟（广播直接处理，零界面）；
+ * 点右下角"设置" = 进设置页。
  */
 class ClockWidgetProvider : AppWidgetProvider() {
 
@@ -24,15 +25,26 @@ class ClockWidgetProvider : AppWidgetProvider() {
         appWidgetIds: IntArray
     ) {
         for (id in appWidgetIds) {
-            val intent = Intent(context, ClockWidgetProvider::class.java).apply {
+            val views = RemoteViews(context.packageName, R.layout.widget_clock)
+
+            // 点图标：设闹钟
+            val tapIntent = Intent(context, ClockWidgetProvider::class.java).apply {
                 action = ACTION_SET_ALARM
             }
-            val pi = PendingIntent.getBroadcast(
-                context, 0, intent,
+            val tapPi = PendingIntent.getBroadcast(
+                context, 0, tapIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
             )
-            val views = RemoteViews(context.packageName, R.layout.widget_clock)
-            views.setOnClickPendingIntent(R.id.widget_root, pi)
+            views.setOnClickPendingIntent(R.id.widget_icon, tapPi)
+
+            // 点"设置"小入口：打开设置页
+            val settingsIntent = Intent(context, SettingsActivity::class.java)
+            val settingsPi = PendingIntent.getActivity(
+                context, 1, settingsIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
+            views.setOnClickPendingIntent(R.id.widget_settings, settingsPi)
+
             appWidgetManager.updateAppWidget(id, views)
         }
     }

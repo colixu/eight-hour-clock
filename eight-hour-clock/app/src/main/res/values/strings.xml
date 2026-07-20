@@ -13,9 +13,8 @@
     <string name="open_clock_button">打开系统时钟管理闹钟</string>
     <string name="pin_widget_button">把一键设闹钟按钮放到桌面</string>
     <string name="pin_widget_manual">当前桌面不支持自动添加，请长按桌面空白处 → 小组件 → 八小时时钟</string>
-    <string name="widget_title">设闹钟</string>
-    <string name="widget_sub">八小时时钟</string>
     <string name="widget_desc">一键设置 N 小时后的闹钟（时长、个数在设置页里改）</string>
+    <string name="widget_settings_entry">设置</string>
     <string name="shortcut_settings">设置</string>
     <string name="shortcut_6h">快设 6 小时</string>
     <string name="shortcut_8h">快设 8 小时</string>

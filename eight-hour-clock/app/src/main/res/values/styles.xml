@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- 全透明 + 无动画：点图标不看到任何界面，只弹 Toast -->
-    <style name="TransparentLaunch" parent="@android:style/Theme.Translucent.NoTitleBar">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:backgroundDimEnabled">false</item>
-        <item name="android:windowAnimationStyle">@style/NoWindowAnimation</item>
-    </style>
-
-    <style name="NoWindowAnimation" parent="@android:style/Animation">
-        <item name="android:windowEnterAnimation">@null</item>
-        <item name="android:windowExitAnimation">@null</item>
+    <!-- 无窗口模式：Activity 根本不创建窗口，点图标无任何界面 -->
+    <style name="TransparentLaunch" parent="@android:style/Theme.NoDisplay">
     </style>
 
 </resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 蓝底圆角方块，与应用图标一致 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#1565C0" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+
+    <!-- 居中的白色表盘 -->
+    <item
+        android:drawable="@drawable/ic_launcher_foreground"
+        android:width="52dp"
+        android:height="52dp"
+        android:gravity="center" />
+
+</layer-list>
